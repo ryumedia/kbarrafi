@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Hadir Guru - Hamalatul Qur'an</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes waterWave {
+            0% { 
+                transform: scale(1) rotate(0deg);
+                opacity: 0.3;
+            }
+            50% { 
+                transform: scale(1.1) rotate(0deg);
+                opacity: 0.2;
+            }
+            100% { 
+                transform: scale(1) rotate(0deg);
+                opacity: 0.3;
+            }
+        }
+        
+        @keyframes ripple {
+            0% { 
+                transform: scale(1);
+                opacity: 0.4;
+            }
+            100% { 
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .water-wave {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 3px solid rgba(37, 99, 235, 0.3);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: waterWave 6s ease-in-out infinite;
+        }
+        
+        .water-wave:nth-child(2) {
+            animation-delay: 2s;
+            border-color: rgba(5, 150, 105, 0.2);
+        }
+        
+        .water-wave:nth-child(3) {
+            animation-delay: 4s;
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        .ripple-effect {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border: 2px solid rgba(37, 99, 235, 0.5);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: ripple 5s ease-out infinite;
+        }
+        
+        .ripple-effect:nth-child(5) {
+            animation-delay: 2.5s;
+        }
+        
+        .slide-in {
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+        
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #dbeafe 0%, #d1fae5 50%, #e0f2fe 100%);
+        }
+        
+        .card-gradient {
+            background: linear-gradient(145deg, #ffffff 0%, #fef7ff 100%);
+        }
+        
+        .text-primary {
+            color: #2563eb;
+        }
+        
+        .text-secondary {
+            color: #059669;
+        }
+        
+        .bg-primary {
+            background-color: #2563eb;
+        }
+        
+        .bg-secondary {
+            background-color: #059669;
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen py-8 px-4">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <div class="relative inline-block mb-6">
+                <div class="water-wave"></div>
+                <div class="water-wave"></div>
+                <div class="water-wave"></div>
+                <div class="ripple-effect"></div>
+                <div class="ripple-effect"></div>
+                <div class="logo-float relative z-10">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijYtNU1xRq53sEa1qgGoSJNhbUgIl97tl0jmTEVsRPNSj5X6qesM09src8MqBhmEOpWaNg_rtVfCLQ7f6OOeIGWKHOumIG0BYY1_8wyihdoBj5pW264xDR7c1vxKFH22CXIgD8yfmQbYGVu1jBzJ02aiEffSAvlab0vsibxTUJaF4e0GAKGlUtXv4NwwQ/s500/Logo%20KB%20Ar%20Rafi.png" 
+                         alt="Logo KB Ar Rafi" 
+                         class="w-32 h-32 rounded-full border-4 border-white shadow-xl object-cover"
+                         onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </div>
+            </div>
+            <h1 class="text-4xl font-bold text-primary mb-4 slide-in">KB Ar Rafi'</h1>
+            <p class="text-xl text-secondary slide-in">Sistem Daftar Hadir Guru</p>
+        </div>
+
+        <!-- Links Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Kehadiran Clock-in -->
+            <div class="slide-in" style="animation-delay: 0.1s;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvIbTG0cWj6Utd4PUkGaM1pcBs_s7eLZgLRZn1VLx9JnPnOA/viewform?usp=dialog" 
+                   class="block card-gradient rounded-xl p-4 shadow-lg btn-hover border border-blue-100">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-semibold text-gray-800 mb-2">Kehadiran</h3>
+                        <p class="text-xs text-gray-600 mb-3">(Clock-in)</p>
+                        <div class="bg-blue-100 text-primary px-3 py-1 rounded-full text-xs font-medium">
+                            Masuk Kerja
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Kepulangan Clock-out -->
+            <div class="slide-in" style="animation-delay: 0.2s;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeF4M5c_0MMv9rCYA-EEAR59PopHkuC1dKz-l4eQx6swKPmOg/viewform?usp=dialog" 
+                   class="block card-gradient rounded-xl p-4 shadow-lg btn-hover border border-blue-100">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-semibold text-gray-800 mb-2">Kepulangan</h3>
+                        <p class="text-xs text-gray-600 mb-3">(Clock-out)</p>
+                        <div class="bg-green-100 text-secondary px-3 py-1 rounded-full text-xs font-medium">
+                            Pulang Kerja
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Rekap Individu -->
+            <div class="slide-in" style="animation-delay: 0.3s;">
+                <a href="https://lookerstudio.google.com/reporting/d8da1103-e488-4ceb-b37d-d90b917fe895" 
+                   class="block card-gradient rounded-xl p-4 shadow-lg btn-hover border border-blue-100">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-semibold text-gray-800 mb-2">Rekap Individu</h3>
+                        <p class="text-xs text-gray-600 mb-3">Data Kehadiran Personal</p>
+                        <div class="bg-blue-100 text-primary px-3 py-1 rounded-full text-xs font-medium">
+                            Laporan Personal
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Kontrol Manajemen -->
+            <div class="slide-in" style="animation-delay: 0.4s;">
+                <a href="https://docs.google.com/spreadsheets/d/19-LnuHLwNlNkdBT3g3DAexbviHc2UfXvSpVBK4XMZ2A/edit?usp=sharing" 
+                   class="block card-gradient rounded-xl p-4 shadow-lg btn-hover border border-blue-100">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-semibold text-gray-800 mb-2">Kontrol Manajemen</h3>
+                        <p class="text-xs text-gray-600 mb-3">Data Spreadsheet</p>
+                        <div class="bg-green-100 text-secondary px-3 py-1 rounded-full text-xs font-medium">
+                            Manajemen Data
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Dashboard Sekolah -->
+            <div class="slide-in col-span-2 md:col-span-2 lg:col-span-1" style="animation-delay: 0.5s;">
+                <a href="https://lookerstudio.google.com/reporting/09eb99bd-a546-47a9-9dd4-7caa5660a6a8" 
+                   class="block card-gradient rounded-xl p-4 shadow-lg btn-hover border border-blue-100">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-semibold text-gray-800 mb-2">Dashboard Sekolah</h3>
+                        <p class="text-xs text-gray-600 mb-3">Analisis Keseluruhan</p>
+                        <div class="bg-gradient-to-r from-green-100 to-blue-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">
+                            Dashboard Utama
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-12 slide-in" style="animation-delay: 0.6s;">
+            <p class="text-primary text-sm">
+                © 2024 KB Ar Rafi' - Sistem Daftar Hadir Digital
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Add staggered animation to cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.slide-in');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                }, index * 100);
+            });
+        });
+
+        // Add click animation
+        document.querySelectorAll('.btn-hover').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('div');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(37, 99, 235, 0.3)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.left = (e.clientX - e.target.offsetLeft) + 'px';
+                ripple.style.top = (e.clientY - e.target.offsetTop) + 'px';
+                
+                this.style.position = 'relative';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+    </script>
+
+    <style>
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9876c48b96c16cf0',t:'MTc1OTI2NzI2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
